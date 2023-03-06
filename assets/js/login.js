@@ -48,10 +48,8 @@ $(function(){
             data:$(this).serialize(),
             success:function(res){
                 if(res.status!==0){
-                    alert(2)
                     return layer.msg(res.message)
                 }
-                alert(1)
                 layer.msg(res.message)
                 localStorage.setItem('token',res.token)
                 location.href='/index.html'
