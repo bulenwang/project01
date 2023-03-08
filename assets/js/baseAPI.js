@@ -2,7 +2,7 @@ $(function(){
     $.ajaxPrefilter(function(option){
         var baseAPI="http://www.liulongbin.top:3007"
         option.url=baseAPI+option.url
-        if(option.url.indexOf('/my')!=-1){
+        if(option.url.indexOf('/my')!==-1){
             option.headers={
                 Authorization:localStorage.getItem('token')||''
             }
